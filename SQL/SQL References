@@ -1,1 +1,11 @@
+-SQL Code ที่แอดทอยสร้างสำหรับคอร์สเรียน CRUD, SQL for Data Analyst 101, 102, 103:
 
+[https://datarockie.notion.site/Data-Science-Bootcamp-Hub-991e85ec309f499482cc273248fee827]
+(https://www.notion.so/Data-Science-Bootcamp-Hub-991e85ec309f499482cc273248fee827)
+
+-ข้อมูลเพิ่มเติมเกี่ยวกับ SQL clauses และวิธีใช้เบื้องต้น:
+
+[https://www.w3schools.com/sql/](https://www.w3schools.com/sql)
+
+-เขียนโค้ด SQL ได้ฟรีที่ SQLite Online Editor ([https://sqliteonline.com/](https://sqliteonline.com/)) 
+แต่ถ้าไม่อยากเขียนโค้ดออนไลน์ สามารถ download DB Browser for SQLite ได้ที่ [https://sqlitebrowser.org/](https://sqlitebrowser.org/)
