@@ -1,0 +1,122 @@
+Homework
+
+Data Visualization Markdown in R
+
+---
+title: "Homework Data Viz"
+author: "Poorin Pitakratananukool"
+date: "`r Sys.Date()`"
+output:
+  html_document: default
+---
+
+Today we learn a few topics in R:
+
+- databases
+- working with date
+- ggplot2
+- R markdown
+
+## Homework:
+
+Explore Data Frame `diamonds` and create 5 visualizations.
+
+### Chart 1 - Relationship between carat and price
+```{r message=FALSE, warning=FALSE}
+library(tidyverse)
+head(diamonds)
+```
+
+Create my first chart!
+```{r}
+set.seed(69)
+ggplot(diamonds %>% sample_n(500), 
+       aes(carat, price)) +
+  geom_point() +
+  geom_smooth() +
+  theme_minimal()
+```
+
+We found a positive relationship between two variables.
+
+Another chart!
+```{r}
+ggplot(diamonds, aes(cut, fill = color)) +
+  geom_bar(position = "fill") +
+  theme_minimal()
+```
+
+We found that diamonds with color [J] have the least quantity compared to other colors of diamonds.
+
+[R Markdown](https://rmarkdown.rstudio.com/)
+
+Add an image to this report
+
+![New Image](https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1776&q=80)
+
+### Chart 2 - Relationship between color and price
+```{r}
+set.seed(69)
+ggplot(diamonds %>% sample_frac(0.1), 
+       aes(color, price)) +
+  geom_col() +
+  theme_minimal() +
+  labs(
+    title = "Relationship between color and price",
+    x = "Color",
+    y = "Price (USD)",
+    subtitle = "We found that color G is the most expensive diamond of all colors.",
+    caption = "Data source: diamonds (ggplot2)"
+  )
+
+```
+
+### Chart 3 - Cut count for each clarity type
+```{r}
+set.seed(69)
+ggplot(diamonds %>% sample_frac(0.1),
+       aes(cut, fill = clarity)) +
+  geom_bar(position = "fill") +
+  theme_minimal() +
+  labs(
+    title = "Cut count for each clarity type",
+    x = "Cut",
+    y = "Count in Percentage",
+    subtitle = "SI1 is the most common clarity for each type of cut, and IF is the least common.",
+    caption = "Data source: diamonds (ggplot2)"
+  )
+```
+
+### Chart 4 - Relationship between cut and price
+```{r}
+set.seed(69)
+ggplot(diamonds %>% sample_frac(0.1), 
+       aes(cut, price, fill = cut)) +
+  geom_col() +
+  theme_minimal() +
+  labs(
+    title = "Relationship between cut and price",
+    x = "Cut",
+    y = "Price (USD)",
+    subtitle = "We found that Ideal cut is the most expensive of all cuts of diamonds.",
+    caption = "Data source: diamonds (ggplot2)"
+  ) 
+```
+
+### Chart 5 - Multiple charts in one board
+```{r message=FALSE, warning=FALSE}
+library(patchwork)
+p1 <- qplot(carat, data = diamonds %>% sample_frac(0.1), geom = "histogram", bins = 10)
+p2 <- qplot(carat, price, data = diamonds %>% sample_frac(0.1), geom = "point")
+p3 <- qplot(cut, price, data = diamonds %>% sample_frac(0.1), geom = "col")
+
+((p1 + p2) / p3)
+```
+
+#### We found that:
+1. The more carat a diamond has, the rarer it will be.
+2. The more carat a diamond has, the more expensive it will be.
+3. The cut quality of diamonds affects their price. The better quality diamonds are, the more expensive they will be.
+
+#### In conclusion: 
+Diamonds with more carats are harder to find and are more expensive. Also, diamonds with better quality are more expensive.
