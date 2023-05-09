@@ -15,3 +15,5 @@ There are 10 Sprints as follow:
 - Dashboard
 
 Verified Badge:
+
+My Notion: https://www.notion.so/fdbbac8bfb7a4d209e9da63b5afea139?v=1e2a1a3f4af74122be12e790cd917e0d&pvs=4
