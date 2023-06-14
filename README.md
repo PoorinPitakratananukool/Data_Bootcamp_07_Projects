@@ -14,6 +14,6 @@ There are 10 Sprints as follow:
 - Python for Data Analyst
 - Dashboard
 
-Verified Badge: ![Badge](https://drive.google.com/file/d/1yM4Ma_yo7Tbp9YvmxHHvU2pjOsAlSsMA/view?usp=sharing)
+Verified Badge: [Badge](https://drive.google.com/file/d/1yM4Ma_yo7Tbp9YvmxHHvU2pjOsAlSsMA/view?usp=sharing)
 
-My Notion: https://www.notion.so/fdbbac8bfb7a4d209e9da63b5afea139?v=1e2a1a3f4af74122be12e790cd917e0d&pvs=4
+My Notion: [Data Science Bootcamp 7 Notes](https://www.notion.so/fdbbac8bfb7a4d209e9da63b5afea139?v=1e2a1a3f4af74122be12e790cd917e0d&pvs=4)
